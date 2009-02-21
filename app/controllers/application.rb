@@ -26,7 +26,6 @@ class ApplicationController < ActionController::Base
 	# get_consumer establishes a OAuth consumer object
 	def get_consumer
 		# consumer key, consumer secret
-		puts TWITTER_OAUTH_SETTINGS[RAILS_ENV]["consumer_key"]
 		OAuth::Consumer.new(TWITTER_OAUTH_SETTINGS[RAILS_ENV]["consumer_key"],
 				    TWITTER_OAUTH_SETTINGS[RAILS_ENV]["consumer_secret"],
 				    { :site=>"http://twitter.com" })
